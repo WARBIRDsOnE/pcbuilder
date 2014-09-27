@@ -8,7 +8,7 @@ function OnTriggerStay2D(coll: Collider2D) {
 		coll.gameObject.transform.position = transform.position;
 		//coll.gameObject.GetComponent("CPU_classes").setIsConnected();
 		coll.gameObject.transform.parent = this.transform.parent;
-		coll.gameObject.GetComponent("Follow Mouse").active = false;
+		coll.gameObject.GetComponent(FollowMouse).enabled = false;
 	}
 	
 	if (coll.gameObject.tag == _tag && !_isAttached && Input.GetMouseButtonUp(0))
